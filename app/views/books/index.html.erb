@@ -15,7 +15,11 @@
         <td><%= book.title %></td>
         <td><%= book.body %></td>
         <td><%= link_to 'Show', book %></td>
-        <td><%= link_to 'Edit', edit_book_path, %></td>
+        <td>
+          <span>
+            <%= link_to 'Edit', edit_book_path(book.id) %>
+          </span>
+        </td>
         <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
